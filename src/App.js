@@ -14,12 +14,12 @@ function App() {
   const [image, setImage] = useState(cloudy)
 
 
-  const apiKey = "583c505bcb358ffe125aa91533dc2cf7";
+  const apiKey = "95fd8ad8f5dc619ae6f7298baf5cb457";
 
   //console.log("Weather Data -- ", weatherData);
 
   const getData = async () => {
-    await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=59.33&lon=18.07&appid=${apiKey}`)
+     await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=59.33&lon=18.07&appid=${apiKey}`)
       .then((res) => {
         setWeatherData(res.data);
         addImage(res.data.weather[0].main, setImage)
